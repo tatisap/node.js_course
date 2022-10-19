@@ -1,7 +1,7 @@
 import { NO_CONTENT, SEPARATOR } from './constants/index.js';
 import { Numbers } from './types/enums.js';
 
-export function revrot(input: string, size: number): string {
+export function solve(input: string, size: number): string {
   if (size === Numbers.Zero || input.length < size) {
     return NO_CONTENT;
   }
@@ -19,7 +19,7 @@ export function revrot(input: string, size: number): string {
   }
 
   if (arrayOfChars.length > size) {
-    result += revrot(arrayOfChars.join(SEPARATOR), size);
+    result += solve(arrayOfChars.join(SEPARATOR), size);
   }
 
   return result;

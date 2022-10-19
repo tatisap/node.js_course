@@ -1,5 +1,5 @@
 import { ARGS_NAMES, MESSAGES, REQUIRED_NUMBER_OF_ARGS } from './constants/index.js';
-import countSpecialMultiples from './solution.js';
+import { solve } from './solution.js';
 import { ExitCode, Numbers } from './types/enums.js';
 import processArg from './utilities/processArg.js';
 
@@ -13,4 +13,4 @@ if (args.length < REQUIRED_NUMBER_OF_ARGS) {
 const numberOfPrimes: number = processArg(args, ARGS_NAMES.numberOfPrimes);
 const maxValue: number = processArg(args, ARGS_NAMES.maxValue);
 
-process.stdout.write(`The result is ${countSpecialMultiples(numberOfPrimes, maxValue)}`);
+process.stdout.write(`The result is ${solve(numberOfPrimes, maxValue)}`);

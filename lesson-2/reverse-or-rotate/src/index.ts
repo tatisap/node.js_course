@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 import { MESSAGES } from './constants/index.js';
-import { revrot } from './solution.js';
+import { solve } from './solution.js';
 import exitWithError from './utilities/exitWithError.js';
 import isNaturalNumber from './utilities/isNaturalNumber.js';
 
@@ -24,4 +24,4 @@ if (!isNaturalNumber(size)) {
   exitWithError(MESSAGES.wrongSizeArgType);
 }
 
-process.stdout.write(revrot(`${stringOfDigits}`, size));
+process.stdout.write(solve(`${stringOfDigits}`, size));
